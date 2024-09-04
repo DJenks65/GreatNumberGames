@@ -1,0 +1,22 @@
+label {
+    display: inline-block;
+    margin-right: 1em;
+}
+
+input {
+    margin-top: 1em;
+    margin-right: 1em;
+}
+
+#turn div {
+    color: red;
+    margin-top: 1em;
+}
+
+#score1, #score2, #die, #total {
+    width: 5em;
+}
+
+.hide {
+    display: none;
+}
