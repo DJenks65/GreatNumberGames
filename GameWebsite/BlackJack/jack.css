@@ -90,3 +90,16 @@ div {
     margin: 0px;
 }
 
+.card face-down {
+    font-size: 200px;
+}
+
+/*.cardHidden {
+    font-size: 10px;
+    text-align: center;
+    display: flex; 
+   /* justifyContent: center;
+    alignItems: center; */
+    /*eight: 100px; 
+}*/
+

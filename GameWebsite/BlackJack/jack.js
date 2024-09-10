@@ -162,6 +162,8 @@ function hitMe()
     check();
 }
 
+let active = hitMe;
+
 function stay()
 {
     // move on to next player, if any
@@ -176,15 +178,39 @@ function stay()
     }
 }
 
-function automate2() {
-    if ((currentPlayer != player.length-1) && (players[currentPlayer].Points > 16)) {
-        hitMe();
+//function automate2() {
+    if ((currentPlayer = getElementById("Player_1")) && (players[currentPlayer].Points < 16)) {
+        document.getElementById('hitMe').click();
     }
 
     else {
-        stay();
+        document.getElementById('stay').click();
+    }
+//}
+
+function autoPlayForPlayer2() {
+    // Assuming `players` is an array of player objects, where each object has a `Points` property
+    // and `currentPlayer` is an index indicating the currently active player
+    const player2Index = 1; // Index for Player 2 (0-based index, so Player 2 is at index 1)
+    const hitMeButtonId = 'hitMe'; // ID of the "Hit Me" button
+    const stayButtonId = 'stay'; // ID of the "Stay" button
+
+    // Check if Player 2 is the current player
+    if (currentPlayer === player2Index) {
+        // Get Player 2's score
+        const player2Score = players[player2Index].Points;
+
+        // Check if Player 2's score is less than 16
+        if (player2Score < 16) {
+            // Click the "Hit Me" button to get another card
+            document.getElementById('hitMe').click();
+        } else {
+            // Click the "Stay" button if the score is 16 or higher
+            document.getElementById('stay').click();
+        }
     }
 }
+
 
 function end()
 {
